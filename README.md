@@ -9,7 +9,7 @@
 
 <div align="center">
   <br>
-  <img src="niyet_filtresi.png.png" alt="Niyet Filtresi Ekranı" width="700">
+  <img src="niyet_filtresi.png" alt="Niyet Filtresi Ekranı" width="700">
   <br><br>
 </div>
 
