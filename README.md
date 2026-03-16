@@ -26,7 +26,7 @@
   <li><b>İrade Kilidi:</b> Diyelim ki ders çalışırken sıkıldınız ve eklentiyi kapatıp Shorts izlemeye karar verdiniz. PureTube buna hemen izin vermiyor. Şalteri indirmek istediğinizde ekrana bir kilit penceresi geliyor ve "odağımı bozmayı kabul ediyorum" cümlesini eksiksiz yazmanızı istiyor. "Bilişsel Sürtünme" denilen bu küçük engel, kullanıcının o anki dürtüsel kararını sorgulamasını sağlıyor.
     <br><br>
     <div align="center">
-      <img src="off_screen_tr.png" alt="İrade Kilidi" width="400">
+      <img src="https://github.com/user-attachments/assets/77a43e7c-8ed3-4180-976c-92f839c3c8ef" alt="İrade Kilidi" width="400">
     </div>
     <br>
   </li>
