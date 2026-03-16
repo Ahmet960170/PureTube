@@ -34,7 +34,7 @@
   <li><b>Accessibility and Dopamine Control:</b> We added a special font option with adjusted letter and word spacing for users with dyslexia (reading difficulty). Also, if you want, you can turn YouTube completely into black and white format; this way, the dopamine release created by bright colors in the brain decreases, making the platform "boring" but suitable for its main purpose.
     <br><br>
     <div align="center">
-      <img src="only_sub_screen_dark_theme.png" alt="Dark Mode and YouTube Interface" width="700">
+      <img src="https://github.com/user-attachments/assets/cc24c76d-94bf-437b-b257-1c213b755380" alt="Dark Mode and YouTube Interface" width="700">
     </div>
     <br>
   </li>
@@ -42,7 +42,7 @@
   <li><b>Global Scalability (i18n API):</b> We didn't embed a single static text into the codes. By using Chrome's i18n API, we made the system responsive to Turkish, English, Spanish, and German languages. The extension works in whatever language your browser is in.
     <br><br>
     <div align="center">
-      <img src="video_page_lite_theme_en.png" alt="English Language and Light Mode" width="700">
+      <img src="https://github.com/user-attachments/assets/03d6c34a-8768-4f08-addb-3c2583949adb" alt="English Language and Light Mode" width="700">
     </div>
     <br>
   </li>
