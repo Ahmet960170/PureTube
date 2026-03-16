@@ -1,6 +1,7 @@
 <div align="center">
   <img src="icon.png" alt="PureTube Logo" width="120">
   <h1>PureTube: YouTube Odak ve İrade Asistanı</h1>
+  <p> Türkçe Oku | <a href="README-en.md"> Read in English</a></p>
 </div>
 
 <p>Biz PureTube Ekibiyiz. Bu projeyi TEKNOFEST 2026 İnsanlık Yararına Teknolojiler yarışması için geliştirdik.</p>
