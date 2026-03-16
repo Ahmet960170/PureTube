@@ -58,7 +58,7 @@
   <li>Google Chrome'u açıp adres çubuğuna <b>chrome://extensions/</b> yazın.</li>
   <li>Sağ üstten <b>"Geliştirici Modu"nu</b> (Developer mode) açın.</li>
   <li>Sol üstteki <b>"Paket açılmamış öğe yükle"</b> (Load unpacked) butonuna tıklayıp indirdiğiniz klasörü seçin.</li>
-  <li>Sağ üstteki uzantılar menüsünden (yapboz ikonu) PureTube'u sabitleyin. Şimdi YouTube'a girip test edebilirsiniz!</li>
+  <li>Sağ üstteki uzantılar menüsünden (yapboz ikonu) PureTube'u sabitleyin. Şimdi YouTube'a girip test edebilirsiniz.</li>
 </ol>
 
 <hr>
