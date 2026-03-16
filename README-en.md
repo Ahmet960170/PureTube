@@ -26,7 +26,7 @@
   <li><b>Willpower Lock:</b> Let's say you get bored while studying and decide to turn off the extension to watch Shorts. PureTube doesn't allow this immediately. When you want to flip the switch, a lock window appears on the screen and asks you to type the sentence "I accept breaking my focus" completely. This small obstacle, called "Cognitive Friction", makes the user question their impulsive decision at that moment.
     <br><br>
     <div align="center">
-      <img src="off_screen_tr.png" alt="Willpower Lock" width="400">
+      <img src="https://github.com/user-attachments/assets/77a43e7c-8ed3-4180-976c-92f839c3c8ef" alt="Willpower Lock" width="400">
     </div>
     <br>
   </li>
