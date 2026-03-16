@@ -10,7 +10,7 @@
 
 <div align="center">
   <br>
-  <img src="niyet_filtresi.png" alt="Niyet Filtresi Ekranı" width="700">
+  <img src="https://github.com/user-attachments/assets/63bb325a-a5b1-42d3-816f-0335d6fa190c" alt="Niyet Filtresi Ekranı" width="700">
   <br><br>
 </div>
 
