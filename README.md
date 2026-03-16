@@ -34,7 +34,7 @@
   <li><b>Erişilebilirlik ve Dopamin Kontrolü:</b> Koda disleksi (okuma güçlüğü) yaşayan kullanıcılar için harf ve kelime aralıkları ayarlanmış özel bir font seçeneği ekledim. Ayrıca isteyenler YouTube'u tamamen siyah-beyaz formata çevirebiliyor; böylece parlak renklerin beyinde yarattığı dopamin salınımı azalarak platform "sıkıcı" ama asıl amacına uygun hale geliyor.
     <br><br>
     <div align="center">
-      <img src="only_sub_screen_dark_theme.png" alt="Karanlık Mod ve YouTube Arayüzü" width="700">
+      <img src="https://github.com/user-attachments/assets/cc24c76d-94bf-437b-b257-1c213b755380" alt="Karanlık Mod ve YouTube Arayüzü" width="700">
     </div>
     <br>
   </li>
@@ -42,7 +42,7 @@
   <li><b>Global Ölçeklenebilirlik (i18n API):</b> Kodların içine tek bir sabit metin bile gömmedik. Chrome'un i18n API'sini kullanarak sistemi Türkçe, İngilizce, İspanyolca ve Almanca dillerine duyarlı hale getirdik. Tarayıcınız hangi dildeyse eklenti o dilde çalışıyor.
     <br><br>
     <div align="center">
-      <img src="video_page_lite_theme_en.png" alt="İngilizce Dil ve Aydınlık Mod" width="700">
+      <img src="https://github.com/user-attachments/assets/03d6c34a-8768-4f08-addb-3c2583949adb" alt="İngilizce Dil ve Aydınlık Mod" width="700">
     </div>
     <br>
   </li>
