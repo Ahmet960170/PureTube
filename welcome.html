@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PureTube</title>
+    <style>
+        :root {
+            --bg: #F0F7FF; 
+            --surface: #ffffff; 
+            --text: #1E3A5F; 
+            --muted: #5C7C9E; 
+            --accent: #007BFF; 
+            --success: #00e676;
+        }
+        
+        body {
+            margin: 0; 
+            padding: 0; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg); 
+            color: var(--text);
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: center;
+            min-height: 100vh; 
+            text-align: center;
+        }
+
+        @keyframes fadeSlideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .container {
+            max-width: 800px; 
+            padding: 40px;
+            animation: fadeSlideUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+        }
+        
+        .welcome-logo {
+            width: 84px; 
+            height: 84px; 
+            margin: 0 auto 20px auto; 
+            display: block;
+            border-radius: 22px; 
+            box-shadow: 0 10px 25px rgba(0, 123, 255, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .welcome-logo:hover { 
+            transform: scale(1.05); 
+        }
+
+        h1 { 
+            font-size: 36px; 
+            margin: 0 0 10px 0; 
+            letter-spacing: -0.5px; 
+        }
+
+        .subtitle { 
+            font-size: 18px; 
+            color: var(--muted); 
+            margin-bottom: 50px; 
+            line-height: 1.5; 
+        }
+
+        .features { 
+            display: grid; 
+            grid-template-columns: repeat(3, 1fr); 
+            gap: 20px; 
+            margin-bottom: 50px; 
+        }
+
+        .feature-card {
+            background-color: var(--surface); 
+            padding: 30px 20px; 
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
+            transition: transform 0.3s ease;
+            border: 1px solid rgba(0, 123, 255, 0.1);
+        }
+
+        .feature-card:hover { 
+            transform: translateY(-5px); 
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1); 
+        }
+
+        .feature-icon { 
+            font-size: 32px; 
+            margin-bottom: 15px; 
+        }
+
+        .feature-card h3 { 
+            margin: 0 0 10px 0; 
+            font-size: 18px; 
+        }
+
+        .feature-card p { 
+            margin: 0; 
+            font-size: 14px; 
+            color: var(--muted); 
+            line-height: 1.4; 
+        }
+
+        .privacy-shield {
+            background-color: rgba(0, 230, 118, 0.1); 
+            border: 1px solid var(--success);
+            padding: 20px; 
+            border-radius: 12px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            gap: 15px;
+            margin-bottom: 40px; 
+            text-align: left;
+        }
+
+        .privacy-shield .shield-icon { 
+            font-size: 36px; 
+        }
+
+        .privacy-text h4 { 
+            margin: 0 0 5px 0; 
+            color: #00b35c; 
+            font-size: 16px; 
+        }
+
+        .privacy-text p { 
+            margin: 0; 
+            font-size: 13px; 
+            color: var(--text); 
+        }
+
+        .btn-start {
+            background: linear-gradient(135deg, var(--accent), #0056b3); 
+            color: white;
+            text-decoration: none; 
+            padding: 15px 40px; 
+            border-radius: 30px; 
+            font-size: 18px; 
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3); 
+            transition: all 0.3s; 
+            display: inline-block;
+        }
+
+        .btn-start:hover { 
+            transform: scale(1.05); 
+            box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4); 
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img src="icon.png" alt="PureTube Logo" class="welcome-logo">
+        
+        <h1 data-i18n="welcomeTitle"></h1>
+        <p class="subtitle" data-i18n="welcomeSubtitle"></p>
+
+        <div class="features">
+            <div class="feature-card">
+                <div class="feature-icon">🎯</div>
+                <h3 data-i18n="feature1Title"></h3>
+                <p data-i18n="feature1Desc"></p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🧠</div>
+                <h3 data-i18n="feature2Title"></h3>
+                <p data-i18n="feature2Desc"></p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">👁️</div>
+                <h3 data-i18n="feature3Title"></h3>
+                <p data-i18n="feature3Desc"></p>
+            </div>
+        </div>
+
+        <div class="privacy-shield">
+            <div class="shield-icon">🔒</div>
+            <div class="privacy-text">
+                <h4 data-i18n="privacyTitle"></h4>
+                <p data-i18n="privacyDesc"></p>
+            </div>
+        </div>
+
+        <a href="https://www.youtube.com" target="_blank" class="btn-start" data-i18n="startBtn"></a>
+    </div>
+
+    <script src="welcome.js"></script>
+</body>
+</html>

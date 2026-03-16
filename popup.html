@@ -1,0 +1,167 @@
+<!--Güncellendi-->
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+
+    <div class="header">
+        <div class="header-content">
+            <img src="icon.png" alt="PureTube Logo" class="logo">
+            <div class="header-text">
+                <h2 data-i18n="extName">PureTube</h2>
+                <p data-i18n="focusedExperience"></p>
+            </div>
+        </div>
+        <div class="header-buttons">
+            <div class="lang-menu">
+                <div class="lang-btn" id="langBtn" title="Dili Değiştir / Change Language">
+                    <span id="selectedLangFlag">🇹🇷</span> <span id="selectedLangCode">TR</span> <span class="arrow">▾</span>
+                </div>
+                <div class="lang-dropdown" id="langDropdown">
+                    <div class="lang-option" data-value="tr">🇹🇷 Türkçe</div>
+                    <div class="lang-option" data-value="en">🇬🇧 English</div>
+                    <div class="lang-option" data-value="es">🇪🇸 Español</div>
+                    <div class="lang-option" data-value="de">🇩🇪 Deutsch</div>
+                </div>
+            </div>
+            <button id="themeToggle" title="Temayı Değiştir">🌙</button>
+        </div>
+    </div>
+
+    <div class="container">
+        
+        <div class="master-box">
+            <div class="master-text">
+                <h3 id="masterStatusText"></h3>
+                <p data-i18n="masterDesc"></p>
+            </div>
+            <label class="toggle-switch">
+                <input type="checkbox" id="masterToggle" checked>
+                <span class="slider"></span>
+            </label>
+        </div>
+
+        <div class="group-title" data-i18n="focusTools"></div>
+        <label class="setting-item">
+            <span class="setting-name" data-i18n="intentFilter"></span>
+            <div class="toggle-switch"><input type="checkbox" id="intentFilter"><span class="slider"></span></div>
+        </label>
+        <label class="setting-item">
+            <span class="setting-name" data-i18n="grayscaleMode"></span>
+            <div class="toggle-switch"><input type="checkbox" id="grayscaleMode"><span class="slider"></span></div>
+        </label>
+
+        <div class="group-title" data-i18n="generalLayout"></div>
+        <label class="setting-item">
+            <span class="setting-name" data-i18n="hideHomepage"></span>
+            <div class="toggle-switch"><input type="checkbox" id="hideHomepage"><span class="slider"></span></div>
+        </label>
+        <label class="setting-item">
+            <span class="setting-name" data-i18n="hideSidebar"></span>
+            <div class="toggle-switch"><input type="checkbox" id="hideSidebar"><span class="slider"></span></div>
+        </label>
+        <label class="setting-item sub-item">
+            <span class="setting-name" data-i18n="hideRecommended"></span>
+            <div class="toggle-switch"><input type="checkbox" id="hideRecommended"><span class="slider"></span></div>
+        </label>
+        <label class="setting-item sub-item">
+            <span class="setting-name" data-i18n="hideLiveChat"></span>
+            <div class="toggle-switch"><input type="checkbox" id="hideLiveChat"><span class="slider"></span></div>
+        </label>
+        <label class="setting-item sub-item">
+            <span class="setting-name" data-i18n="hidePlaylist"></span>
+            <div class="toggle-switch"><input type="checkbox" id="hidePlaylist"><span class="slider"></span></div>
+        </label>
+        <label class="setting-item">
+            <span class="setting-name" data-i18n="hideShorts"></span>
+            <div class="toggle-switch"><input type="checkbox" id="hideShorts"><span class="slider"></span></div>
+        </label>
+
+        <div class="group-title" data-i18n="contentInteraction"></div>
+        <label class="setting-item">
+            <span class="setting-name" data-i18n="hideComments"></span>
+            <div class="toggle-switch"><input type="checkbox" id="hideComments"><span class="slider"></span></div>
+        </label>
+        <label class="setting-item">
+            <span class="setting-name" data-i18n="hideEndVideowall"></span>
+            <div class="toggle-switch"><input type="checkbox" id="hideEndVideowall"><span class="slider"></span></div>
+        </label>
+        <label class="setting-item">
+            <span class="setting-name" data-i18n="hideEndCards"></span>
+            <div class="toggle-switch"><input type="checkbox" id="hideEndCards"><span class="slider"></span></div>
+        </label>
+        <label class="setting-item">
+            <span class="setting-name" data-i18n="hideMixRadio"></span>
+            <div class="toggle-switch"><input type="checkbox" id="hideMixRadio"><span class="slider"></span></div>
+        </label>
+        <label class="setting-item">
+            <span class="setting-name" data-i18n="hideMerch"></span>
+            <div class="toggle-switch"><input type="checkbox" id="hideMerch"><span class="slider"></span></div>
+        </label>
+
+        <div class="group-title" data-i18n="belowVideoInfo"></div>
+        <label class="setting-item">
+            <span class="setting-name" data-i18n="hideAll"></span>
+            <div class="toggle-switch"><input type="checkbox" id="hideVideoInfo"><span class="slider"></span></div>
+        </label>
+        <label class="setting-item sub-item">
+            <span class="setting-name" data-i18n="hideVideoButtons"></span>
+            <div class="toggle-switch"><input type="checkbox" id="hideVideoButtons"><span class="slider"></span></div>
+        </label>
+        <label class="setting-item sub-item">
+            <span class="setting-name" data-i18n="hideChannel"></span>
+            <div class="toggle-switch"><input type="checkbox" id="hideChannel"><span class="slider"></span></div>
+        </label>
+        <label class="setting-item sub-item">
+            <span class="setting-name" data-i18n="hideVideoDesc"></span>
+            <div class="toggle-switch"><input type="checkbox" id="hideVideoDesc"><span class="slider"></span></div>
+        </label>
+
+        <div class="group-title" data-i18n="topBarHeader"></div>
+        <label class="setting-item">
+            <span class="setting-name" data-i18n="hideTopHeader"></span>
+            <div class="toggle-switch"><input type="checkbox" id="hideTopHeader"><span class="slider"></span></div>
+        </label>
+        <label class="setting-item sub-item">
+            <span class="setting-name" data-i18n="onlyNotificationBell"></span>
+            <div class="toggle-switch"><input type="checkbox" id="hideNotification"><span class="slider"></span></div>
+        </label>
+
+        <div class="group-title" data-i18n="a11yTitle"></div>
+        <label class="setting-item">
+            <span class="setting-name" data-i18n="dyslexiaFont"></span>
+            <div class="toggle-switch"><input type="checkbox" id="dyslexiaFont"><span class="slider"></span></div>
+        </label>
+
+        <div class="footer-stats">
+            <div class="stats-left">
+                <span class="stat-icon">🎯</span>
+                <span data-i18n="focusScorecardTitle"></span>:
+                <strong id="focusCountDisplay">0</strong> <span data-i18n="timesText"></span>
+            </div>
+            <span class="version-tag" data-i18n-title="versionNotes">v1.0.0</span>
+        </div>
+
+    </div> 
+    
+    <div id="hardcoreModal" class="modal-overlay">
+        <div class="modal-content">
+            <h3 data-i18n="hardcoreModalTitle"></h3>
+            <p data-i18n="hardcoreModalDesc"></p>
+            <div class="challenge-box">
+                <span id="challengeText" data-i18n="hardcoreChallengeText"></span>
+            </div>
+            <input type="text" id="hardcoreInput" data-i18n-placeholder="hardcoreInputPlaceholder" autocomplete="off">
+            <div class="modal-buttons">
+                <button id="hardcoreCancel" class="btn-cancel" data-i18n="hardcoreCancelBtn"></button>
+                <button id="hardcoreConfirm" class="btn-confirm" data-i18n="hardcoreConfirmBtn" disabled></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>

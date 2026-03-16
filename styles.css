@@ -1,0 +1,201 @@
+:root {
+    --intent-overlay-bg: rgba(240, 247, 255, 0.85); 
+    --intent-box-bg: #ffffff; 
+    --intent-text-main: #1E3A5F; 
+    --intent-text-muted: #5C7C9E; 
+    --intent-input-bg: #F8FAFC; 
+    --intent-input-border: #E0EFFF; 
+    --intent-accent: #007BFF; 
+    --intent-accent-hover: #0056b3; 
+    --intent-shadow: rgba(0,0,0,0.1); 
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --intent-overlay-bg: rgba(11, 17, 32, 0.85); 
+        --intent-box-bg: #151E32; 
+        --intent-text-main: #F0F6FC; 
+        --intent-text-muted: #8B9BB4; 
+        --intent-input-bg: #1F293A; 
+        --intent-input-border: #2A3B5C; 
+        --intent-accent: #3B82F6; 
+        --intent-accent-hover: #2563EB; 
+        --intent-shadow: rgba(0,0,0,0.3); 
+    }
+}
+
+html.hideHomepage ytd-browse[page-subtype="home"] #primary { display: none !important; }
+html.hideHomepage ytd-guide-entry-renderer a[href="/"],
+html.hideHomepage ytd-mini-guide-entry-renderer a[href="/"] { display: none !important; }
+
+html.hideSidebar #secondary { display: none !important; }
+html.hideRecommended #secondary #related { display: none !important; }
+html.hideLiveChat ytd-live-chat-frame, html.hideLiveChat #chat { display: none !important; }
+html.hidePlaylist ytd-playlist-panel-video-renderer, html.hidePlaylist ytd-playlist-panel-renderer { display: none !important; }
+
+html.hideShorts ytd-reel-shelf-renderer,
+html.hideShorts ytd-rich-shelf-renderer[is-shorts],
+html.hideShorts ytd-guide-entry-renderer a[title="Shorts"],
+html.hideShorts ytd-mini-guide-entry-renderer[aria-label="Shorts"],
+html.hideShorts ytd-mini-guide-entry-renderer a[title="Shorts"],
+html.hideShorts a[href^="/shorts/"],
+html.hideShorts ytd-shorts { display: none !important; }
+
+html.hideEndVideowall .html5-video-player .ytp-ce-video, 
+html.hideEndVideowall .html5-video-player .ytp-ce-channel,
+html.hideEndVideowall .html5-video-player .ytp-ce-playlist { display: none !important; }
+html.hideEndCards .ytp-ce-element.ytp-ce-website,
+html.hideEndCards .ytp-ce-element.ytp-ce-merchandise,
+html.hideEndCards .ytp-endscreen-paginate { display: none !important; }
+
+html.hideComments ytd-comments#comments { display: none !important; }
+
+html.hideMixRadio ytd-radio-renderer, html.hideMixRadio a[href*="radio"] { display: none !important; }
+html.hideMerch ytd-merch-shelf-renderer, html.hideMerch #ticket-shelf { display: none !important; }
+
+html.hideVideoInfo #above-the-fold #bottom-row, 
+html.hideVideoInfo #owner, 
+html.hideVideoInfo #actions { display: none !important; }
+html.hideVideoButtons #actions.ytd-watch-metadata, 
+html.hideVideoButtons #menu.ytd-watch-metadata { display: none !important; }
+html.hideChannel #owner.ytd-watch-metadata { display: none !important; }
+html.hideVideoDesc #description.ytd-watch-metadata,
+html.hideVideoDesc #description-inner,
+html.hideVideoDesc ytd-text-inline-expander,
+html.hideVideoDesc #bottom-row { display: none !important; }
+
+html.hideTopHeader #masthead-container { display: none !important; }
+html.hideNotification ytd-notification-topbar-button-renderer { display: none !important; }
+
+
+html.grayscaleMode { filter: grayscale(100%) !important; }
+
+html.dyslexiaFont * {
+    font-family: 'Comic Sans MS', 'Trebuchet MS', sans-serif !important;
+    letter-spacing: 0.05em !important;
+    line-height: 1.5 !important;
+}
+
+
+#puretube-intent-overlay {
+    position: fixed !important;
+    top: 0 !important; left: 0 !important;
+    width: 100vw !important; height: 100vh !important;
+    backdrop-filter: blur(28px) !important; 
+    -webkit-backdrop-filter: blur(28px) !important;
+    z-index: 9999999999 !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif !important;
+    animation: fadeInOverlay 0.5s ease !important;
+}
+
+.puretube-intent-box {
+    border-radius: 32px !important; 
+    padding: 60px 50px !important; 
+    width: 90% !important;
+    max-width: 800px !important; 
+    text-align: center !important;
+    animation: scaleUpBox 0.6s cubic-bezier(0.19, 1, 0.22, 1) !important;
+    box-sizing: border-box !important;
+}
+
+.puretube-intent-logo {
+    margin-bottom: 25px !important;
+    line-height: 1 !important;
+}
+.puretube-intent-box h2 {
+    margin: 0 0 35px 0 !important;
+    font-size: 32px !important; 
+    font-weight: 800 !important;
+    letter-spacing: -0.5px !important;
+}
+
+#puretube-intent-input {
+    width: 100% !important;
+    padding: 24px 30px !important; 
+    font-size: 20px !important; 
+    border-radius: 20px !important; 
+    outline: none !important;
+    box-sizing: border-box !important;
+    margin-bottom: 30px !important;
+    transition: all 0.3s ease !important;
+}
+#puretube-intent-input::placeholder {
+    font-style: italic !important;
+}
+#puretube-intent-input:focus {
+    transform: translateY(-2px) !important; 
+}
+
+#puretube-intent-btn {
+    width: 100% !important;
+    padding: 22px !important;
+    font-size: 20px !important; 
+    font-weight: bold !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 20px !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+}
+#puretube-intent-btn:hover {
+    transform: translateY(-3px) !important;
+}
+#puretube-intent-btn:active {
+    transform: translateY(1px) !important;
+}
+
+#puretube-intent-overlay[data-theme="dark"] { background-color: rgba(11, 17, 32, 0.85) !important; }
+#puretube-intent-overlay[data-theme="dark"] .puretube-intent-box {
+    background: #151E32 !important;
+    border: 1px solid #2A3B5C !important; 
+    box-shadow: 0 30px 80px rgba(0,0,0,0.8) !important;
+}
+#puretube-intent-overlay[data-theme="dark"] h2 { color: #F0F6FC !important; }
+#puretube-intent-overlay[data-theme="dark"] #puretube-intent-input {
+    background-color: #0B1120 !important;
+    border: 2px solid #2A3B5C !important;
+    color: #F0F6FC !important;
+}
+#puretube-intent-overlay[data-theme="dark"] #puretube-intent-input::placeholder { color: #5C7C9E !important; }
+#puretube-intent-overlay[data-theme="dark"] #puretube-intent-input:focus {
+    border-color: #3B82F6 !important;
+    box-shadow: 0 0 0 6px rgba(59, 130, 246, 0.25) !important; 
+}
+#puretube-intent-overlay[data-theme="dark"] #puretube-intent-btn {
+    background: linear-gradient(135deg, #2563EB, #1D4ED8) !important;
+    box-shadow: 0 8px 30px rgba(37, 99, 235, 0.4) !important;
+}
+
+#puretube-intent-overlay[data-theme="light"] { background-color: rgba(240, 247, 255, 0.85) !important; }
+#puretube-intent-overlay[data-theme="light"] .puretube-intent-box {
+    background: #ffffff !important;
+    border: 1px solid #E0EFFF !important; 
+    box-shadow: 0 30px 80px rgba(0,0,0,0.15) !important;
+}
+#puretube-intent-overlay[data-theme="light"] h2 { color: #1E3A5F !important; }
+#puretube-intent-overlay[data-theme="light"] #puretube-intent-input {
+    background-color: #F8FAFC !important;
+    border: 2px solid #E0EFFF !important;
+    color: #1E3A5F !important;
+}
+#puretube-intent-overlay[data-theme="light"] #puretube-intent-input::placeholder { color: #8B9BB4 !important; }
+#puretube-intent-overlay[data-theme="light"] #puretube-intent-input:focus {
+    border-color: #007BFF !important;
+    box-shadow: 0 0 0 6px rgba(0, 123, 255, 0.2) !important; 
+}
+#puretube-intent-overlay[data-theme="light"] #puretube-intent-btn {
+    background: linear-gradient(135deg, #007BFF, #0056b3) !important;
+    box-shadow: 0 8px 30px rgba(0, 123, 255, 0.3) !important;
+}
+
+@keyframes fadeInOverlay {
+    from { opacity: 0; backdrop-filter: blur(0px); }
+    to { opacity: 1; backdrop-filter: blur(28px); }
+}
+@keyframes scaleUpBox {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
