@@ -1,70 +1,34 @@
-<div align="center">
-  <img src="icon.png" alt="PureTube Logo" width="120">
-  <h1>🚀 PureTube</h1>
-  <p><b>YouTube'u Bir Zaman Tuzağından Çıkarıp, Profesyonel Bir Öğrenme Merkezine Dönüştürün.</b></p>
+# PureTube: YouTube Odak ve İrade Asistanı
 
-  <img src="https://img.shields.io/badge/TEKNOFEST-2026-red?style=for-the-badge" alt="TEKNOFEST 2026">
-  <img src="https://img.shields.io/badge/Kategori-İnsanlık_Yararına_Teknolojiler-blue?style=for-the-badge" alt="Kategori">
-  <img src="https://img.shields.io/badge/Seviye-Lise-orange?style=for-the-badge" alt="Lise Seviyesi">
-  <br>
-  <img src="https://img.shields.io/badge/Manifest-V3-success?style=flat-square&logo=google-chrome" alt="Manifest V3">
-  <img src="https://img.shields.io/badge/Dil-i18n_(TR_|_EN_|_ES_|_DE)-lightgrey?style=flat-square" alt="i18n">
-  <img src="https://img.shields.io/badge/Gizlilik-100%25_Yerel_Veri-brightgreen?style=flat-square" alt="Privacy">
-</div>
+<p align="center">
+  <img src="https://img.shields.io/badge/TEKNOFEST-2026-red?style=flat-square">
+  <img src="https://img.shields.io/badge/İnsanlık_Yararına_Teknolojiler-Lise-blue?style=flat-square">
+  <img src="https://img.shields.io/badge/Manifest-V3-success?style=flat-square">
+</p>
 
----
+Selam! Ben [Adın Soyadın]. Bu projeyi TEKNOFEST 2026 İnsanlık Yararına Teknolojiler yarışması için geliştirdim.
 
-## 📌 Projenin Amacı ve Vizyonu
-Günümüzde öğrencilerin araştırma yapmak veya ders dinlemek amacıyla girdikleri YouTube'da, yapay zeka destekli öneri algoritmaları ve **Shorts** videoları yüzünden saatlerini kaybetmesi (Doomscrolling) büyük bir problemdir. 
+Hepimizin başına mutlaka gelmiştir: YouTube'a bir matematik konu anlatımı izlemek veya araştırma yapmak için gireriz ama algoritma bizi öyle bir yakalar ki, bir saat sonra kendimizi arka arkaya Shorts videoları kaydırırken buluruz. PureTube'u tam olarak bu "dijital dikkat dağınıklığını" çözmek ve YouTube'u sadece bir öğrenme merkezine dönüştürmek için kodladım.
 
-**PureTube**, kullanıcıyı platformun bağımlılık yapıcı unsurlarından koruyan, **"En Az Ayrıcalık" (Least Privilege)** prensibiyle çalışan ve tamamen çevrimdışı (offline) işlem yapan profesyonel bir odaklanma asistanıdır.
+## Projenin Arkasındaki Mühendislik ve Mantık
 
----
+Sadece "şunu gizle, bunu kapat" diyen basit bir eklenti yapmak istemedim. Kodları yazarken işin içine biraz psikoloji ve modern yazılım mimarisi katmaya çalıştım:
 
-## ✨ Temel Özellikler ve Mühendislik Yaklaşımı
+* **Niyet Filtresi (Intent Shield):** YouTube'u açtığınızda site hemen yüklenmez. Karşınıza çıkan puslu ekrana o anki "niyetinizi" (örn: türev soru çözümü) yazmanız gerekir. Sistem arka planda küçük bir analiz yapar; oyun, dizi, kedi gibi eğlence kelimelerini veya "asdf" gibi rastgele tuşlamaları tespit ederse içeri girmenize izin vermez.
+* **İrade Kilidi (Friction Design):** Diyelim ki ders çalışırken sıkıldınız ve eklentiyi kapatıp Shorts izlemeye karar verdiniz. PureTube buna hemen izin vermiyor. Şalteri indirmek istediğinizde ekrana bir kilit penceresi geliyor ve "odağımı bozmayı kabul ediyorum" cümlesini eksiksiz yazmanızı istiyor. UI/UX literatüründe "Bilişsel Sürtünme" (Cognitive Friction) denilen bu küçük engel, kullanıcının o anki dürtüsel kararını sorgulamasını sağlıyor.
+* **Sıfır Maliyetli (Zero-Cost) Gizleme:** YouTube'un arayüzünü (Shorts, önerilenler, yorumlar, bitiş ekranları) gizlerken JavaScript kullanıp DOM elementlerini silmek tarayıcıyı çok yorar. Bunun yerine doğrudan CSS `!important` etiketleriyle sayfa hiyerarşisini ezdim. Tarayıcıda hiçbir performans kaybı yaşanmıyor.
+* **Erişilebilirlik ve Dopamin Kontrolü:** Koda disleksi (okuma güçlüğü) yaşayan kullanıcılar için özel bir font seçeneği ekledim. Ayrıca isteyenler YouTube'u tamamen siyah-beyaz formata çevirebiliyor; böylece parlak renklerin beyinde yarattığı dopamin salınımı azalarak platform "sıkıcı" ama asıl amacına uygun hale geliyor.
+* **Global Ölçeklenebilirlik (i18n API):** Kodların içine tek bir sabit metin bile gömmedim. Chrome'un i18n API'sini kullanarak sistemi Türkçe, İngilizce, İspanyolca ve Almanca dillerine duyarlı hale getirdim.
 
-### 🎯 1. Akıllı Niyet Filtresi (Intent Shield)
-YouTube'a girildiğinde platformu doğrudan açmaz. Ekranı buğulayarak kullanıcının amacını (niyetini) yazmasını zorunlu kılar.
-* **Algoritmik Denetim:** Eğlence odaklı kelimeleri (oyun, dizi, komik vb.) veya anlamsız harf dizilerini (asdf) tespit edip girişi engeller. Kullanıcıyı bilinçli bir arama yapmaya zorlar.
+## Kendi Tarayıcınızda Nasıl Test Edebilirsiniz?
 
-### 🔒 2. İrade Kilidi (Friction Design)
-Öğrencinin ders çalışmaktan sıkılıp eklentiyi kapatmak istemesi durumunda devreye girer.
-* **Bilişsel Sürtünme:** Şalterin kapanmasını geçici olarak durdurur ve kullanıcının ekrandaki uzun bir metni ("odağımı bozmayı kabul ediyorum") kusursuz bir şekilde yazmasını ister. Bu "sürtünme anı", kullanıcının dürtüsel kararından vazgeçmesini sağlar.
+Jüri üyelerimiz veya kodu incelemek isteyen geliştiriciler için kurulum çok basit:
 
-### 🧹 3. Zero-Cost Görsel Arınma (DOM Manipulation)
-YouTube'un karmaşık arayüzünü performansı düşürmeden temizler.
-* JavaScript ile eleman silip sayfayı kilitlemek yerine, **CSS Specificity (`!important`)** hiyerarşisi kullanılarak *Shorts, Önerilen Videolar, Yorumlar, Bitiş Ekranları ve Canlı Sohbet* anında gizlenir.
-
-### 👁️ 4. Kapsayıcı Tasarım (A11Y - Erişilebilirlik)
-* **Disleksi Dostu Mod:** Özel font ailesi ve artırılmış harf/satır boşlukları ile okuma güçlüğü çeken kullanıcılara destek sağlar.
-* **Renksiz Mod (Dopamin Kontrolü):** Ekranı tamamen siyah-beyaz yaparak parlak renklerin beyinde yarattığı dopamin salınımını düşürür, platformu "sıkıcı" ama verimli hale getirir.
-
-### 🌍 5. Global Mimari (i18n Localization)
-Proje içine gömülü (hardcoded) hiçbir sabit metin bulunmaz. Chrome'un **i18n API'si** kullanılarak tarayıcı diline göre asenkron (`async/await`) olarak **Türkçe, İngilizce, İspanyolca ve Almanca** dillerinde anında çalışır.
+1. Bu sayfanın sağ üstündeki yeşil **"Code"** butonuna tıklayıp **"Download ZIP"** diyerek projeyi bilgisayarınıza indirin ve bir klasöre çıkartın.
+2. Google Chrome'u açıp adres çubuğuna `chrome://extensions/` yazın.
+3. Sağ üstten **"Geliştirici Modu"nu** (Developer mode) açın.
+4. Sol üstteki **"Paket açılmamış öğe yükle"** (Load unpacked) butonuna tıklayıp indirdiğiniz klasörü seçin.
+5. Sağ üstteki uzantılar menüsünden (yapboz ikonu) PureTube'u sabitleyin. Şimdi YouTube'a girip test edebilirsiniz!
 
 ---
-
-## 🛠️ Kurulum Rehberi (Geliştirici Modu)
-
-Bu eklenti Chrome Web Mağazası'na yüklenmeden önce yerel bilgisayarınızda test etmek için tasarlanmıştır.
-
-1. Bu depoyu sağ üstteki yeşil **"Code"** butonuna basarak `Download ZIP` seçeneğiyle indirin ve bir klasöre çıkartın.
-2. Google Chrome tarayıcısını açın ve adres çubuğuna `chrome://extensions/` yazın.
-3. Sağ üst köşedeki **"Geliştirici Modu" (Developer mode)** anahtarını aktif hale getirin.
-4. Sol üstte beliren **"Paket açılmamış öğe yükle" (Load unpacked)** butonuna tıklayın.
-5. İndirip zip'ten çıkardığınız klasörü seçin.
-6. Sağ üstteki yapboz (eklentiler) ikonuna tıklayarak PureTube'u sabitleyin ve hemen YouTube'a girerek test edin!
-
----
-
-## 📁 Klasör Hiyerarşisi (Directory Structure)
-```text
-PureTube/
- ├── _locales/           # i18n Dinamik Dil Motoru Dosyaları (TR, EN, ES, DE)
- ├── manifest.json       # MV3 Güvenlik ve İzin Mimarisi (Kök Dosya)
- ├── background.js       # Service Worker (Olay Güdümlü Arka Plan İşlemleri)
- ├── content.js          # DOM Enjeksiyonu ve Niyet Filtresi Algoritması
- ├── styles.css          # YouTube UI Gizleme Kuralları (Zero-Cost)
- ├── popup.html/css/js   # Eklenti Arayüzü, Akordeon Menü ve Ayar Motoru
- ├── welcome.html/js     # İlk Kurulum (Onboarding) Karşılama Ekranı
- └── icon.png            # Yüksek Çözünürlüklü Vektörel Logolar
+*Bu açık kaynaklı proje, teknolojiyi zamanımızı çalan değil, zamanımızı yönetmemizi sağlayan bir araca dönüştürmek amacıyla kodlanmıştır.*
