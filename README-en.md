@@ -10,7 +10,7 @@
 
 <div align="center">
   <br>
-  <img src="niyet_filtresi.png" alt="Intent Filter Screen" width="700">
+  <img src="https://github.com/user-attachments/assets/63bb325a-a5b1-42d3-816f-0335d6fa190c" alt="Intent Filter Screen" width="700">
   <br><br>
 </div>
 
